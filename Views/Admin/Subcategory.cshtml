@@ -1,0 +1,41 @@
+﻿@model IEnumerable<BGExcursion.DAL.Tbl_Subcategory>
+
+@{
+    ViewBag.Title = "Subcategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fas fa-table"></i>
+            Категории
+            <a href="../Admin/SubcategoryAdd" class="btn btn-info pull-right fa fa-plus">Добави нова категория </a>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Наименование на категория</th>
+                            <th>Действие</th>
+
+                        </tr>
+                    </thead>
+                   
+                    <tbody>
+                        @foreach (var item in Model)
+                        {                           
+                            <tr>                              
+                                <td>@item.SubcategoryName</td>
+                                <td>
+                                    @Html.ActionLink("Редакция", "SubcategoryEdit", new { subcategoryId = item.SubcategoryId })
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>

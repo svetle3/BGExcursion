@@ -1,0 +1,44 @@
+﻿@model List<BGExcursion.DAL.Tbl_Category>
+@{
+    ViewBag.Title = "Categories";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container-fluid">
+
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fas fa-table"></i>
+            Отдел
+            <a href="../Admin/CategoryAdd" class="btn btn-info pull-right fa fa-plus">Добави нов отдел</a>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Наименование на отдел</th>
+                            <th>Действие</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+
+                            <tr>
+                                <td>@item.CategoryName</td>
+                                <td>
+                                    @Html.ActionLink("Редакция", "CategoryEdit", new { categoryId = item.CategoryId })
+                                </td>
+
+
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>

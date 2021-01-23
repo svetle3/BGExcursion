@@ -1,0 +1,42 @@
+﻿@model BGExcursion.DAL.Tbl_CartStatus
+@{
+    ViewBag.Title = "CartDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Детайли за карта на клиент</title>
+</head>
+
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>Детайли за карта на клиент</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.CartStatus, "Номер на карта", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-5" >
+                    @Html.EditorFor(model => model.CartStatus, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.CartStatus, "16 цифрен код", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Добави" class="btn btn-success" />
+                </div>
+            </div>
+        </div>
+    }
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="676c0be1804f49c88e56ed6802ac1f80" Name="Diagram1">
+        <EntityTypeShape EntityType="BGExcursionModel.Tbl_Cart" Width="1.5" PointX="7.5" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BGExcursionModel.Tbl_CartStatus" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BGExcursionModel.Tbl_Category" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BGExcursionModel.Tbl_MemberRole" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BGExcursionModel.Tbl_Members" Width="1.5" PointX="7.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BGExcursionModel.Tbl_Product" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BGExcursionModel.Tbl_Roles" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BGExcursionModel.Tbl_ShippingDetails" Width="1.5" PointX="10" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BGExcursionModel.Tbl_SlideImage" Width="1.5" PointX="9.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BGExcursionModel.Tbl_Subcategory" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <AssociationConnector Association="BGExcursionModel.FK__Tbl_Cart__Produc__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="BGExcursionModel.FK__Tbl_Produ__Categ__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="BGExcursionModel.FK__Tbl_Subca__Categ__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="BGExcursionModel.FK__Tbl_Shipp__Membe__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="BGExcursionModel.FK__Tbl_Shipp__Membe__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="BGExcursionModel.FK__Tbl_Produ__Subca__47DBAE45" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
